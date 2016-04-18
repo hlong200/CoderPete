@@ -10,11 +10,13 @@
 					document.getElementById("main-container").style.width = "100vw";
 					document.getElementById("main-container").style.left = "0";
 					document.getElementById("left-container").style.visibility = "hidden";
+					document.getElementById("collapse").src = "images/right-collapse.png";
 					isCollapsed = true;
 				} else if (isCollapsed == true) {
 					document.getElementById("main-container").style.width = "83.75vw";
 					document.getElementById("main-container").style.left = "15vw";
 					document.getElementById("left-container").style.visibility = "visible";
+					document.getElementById("collapse").src = "images/left-collapse.png";
 					isCollapsed = false;
 				}
 			}
@@ -32,6 +34,7 @@
         </div>
 		<div id="main-container">
 			<img id="collapse" onclick="collapseNav()" src="images/left-collapse.png" />
+			<img id="banner" src="images/Banner.gif" />
 		</div>
     </body>
 </html>
