@@ -12,13 +12,13 @@
 					document.getElementById("main-container").style.width = "100vw";
 					document.getElementById("main-container").style.left = "0";
 					document.getElementById("left-container").style.visibility = "hidden";
-					document.getElementById("collapse").src = "images/right-collapse.png";
+					document.getElementById("collapse").src = "images/right-collapse-inverted.png";
 					isCollapsed = true;
 				} else if (isCollapsed == true) {
 					document.getElementById("main-container").style.width = "83.75vw";
 					document.getElementById("main-container").style.left = "15vw";
 					document.getElementById("left-container").style.visibility = "visible";
-					document.getElementById("collapse").src = "images/left-collapse.png";
+					document.getElementById("collapse").src = "images/left-collapse-inverted.png";
 					isCollapsed = false;
 				}
 			}
@@ -27,16 +27,16 @@
     <body>
         <div id="left-container">
                 <ul class="vertical-nav">
-                    <li><a class="vertical-nav" href="#">Home</a></li>
+                    <li><a class="vertical-nav" href="index.html">Home</a></li>
                     <li><a class="vertical-nav" href="#">Classes</a></li>
                     <li><a class="vertical-nav" href="#">Guidelines</a></li>
-                    <li><a class="vertical-nav" href="planbook.html">Planbook</a></li>
+                    <li><a class="vertical-nav" href="#">Planbook</a></li>
                     <li><a class="vertical-nav" href="#">Contact</a></li>
                 </ul>
         </div>
 		<div id="main-container">
-			<img id="collapse" onclick="collapseNav()" src="images/left-collapse.png" />
-			<img id="banner" src="images/Banner.gif" />
+			<img id="collapse" onclick="collapseNav()" src="images/left-collapse-inverted.png" />
+			<iframe id="planbook" frameBorder="0" src="http://planbook.com/planbook.html?t=911676&k=stollclass&y=0&c=0"></iframe>
 		</div>
     </body>
 </html>
