@@ -2,10 +2,26 @@
 <html>
     <head>
         <link href="style.css" type="text/css" rel="stylesheet" />
+		<script>
+			var isCollapsed = false;
+	
+			function collapseNav() {
+				if (isCollapsed == false) {
+					document.getElementById("main-container").style.width = "100vw";
+					document.getElementById("main-container").style.left = "0";
+					document.getElementById("left-container").style.visibility = "hidden";
+					isCollapsed = true;
+				} else if (isCollapsed == true) {
+					document.getElementById("main-container").style.width = "83.75vw";
+					document.getElementById("main-container").style.left = "15vw";
+					document.getElementById("left-container").style.visibility = "visible";
+					isCollapsed = false;
+				}
+			}
+		</script>
     </head>
     <body>
         <div id="left-container">
-            <div id="nav-container">
                 <ul class="vertical-nav">
                     <li><a class="vertical-nav" href="#">Home</a></li>
                     <li><a class="vertical-nav" href="#">qwerty</a></li>
@@ -13,7 +29,9 @@
                     <li><a class="vertical-nav" href="#">ghjkl</a></li>
                     <li><a class="vertical-nav" href="#">zxcv</a></li>
                 </ul>
-            </div>
         </div>
+		<div id="main-container">
+			<img id="collapse" onclick="collapseNav()" src="images/left-collapse.png" />
+		</div>
     </body>
 </html>

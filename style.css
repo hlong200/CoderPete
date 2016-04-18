@@ -14,24 +14,23 @@ ul.vertical-nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 a.vertical-nav {
     display: block;
     background-color: rgba(255, 255, 0, .5);
-    width: 150px;
-    height: 35px;
+    width: 99%;
+    height: 45px;
     margin-bottom: 25px;
     text-align: center;
     text-decoration: none;
     color: black;
     border-style: solid;
     border-width: 2px;
-}
-
-#nav-container {
-    width: 150px;
-    padding-top: 230%;
+	z-index: 3;
 }
 
 #left-container {
@@ -41,10 +40,30 @@ a.vertical-nav {
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
     background-color:#282828;
     background-size:16px 16px;
-    width: 152px;
+    width: 15vw;
     height: 100vh;
     margin-top: -8px;
     padding: 0;
     margin-left: -8px;
-    border-right-style: solid;
+	z-index: 2;
+	display: inline-block;
+	border-right-style: solid;
+	border-width: 2px;
+}
+
+#main-container {
+	width: 83.75vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 15vw;
+	background-color: rgba(255, 0, 0, .25);
+	z-index: 1;
+	display: inline-block;
+}
+
+#collapse {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
