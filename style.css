@@ -13,8 +13,10 @@ body {
 ul.vertical-nav {
     list-style-type: none;
     margin: 0;
+    margin-top: 33.3%;
+    margin-bottom: 33.3%;
     padding: 0;
-	position: relative;
+	position: static;
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -22,8 +24,8 @@ ul.vertical-nav {
 a.vertical-nav {
     display: block;
     background-color: rgba(0, 255, 255, .5);
-    width: 99%;
-    height: 45px;
+    width: 100%;
+    height: 5vh;
     margin-bottom: 25px;
     text-align: center;
     text-decoration: none;
@@ -34,6 +36,25 @@ a.vertical-nav {
 	z-index: 3;
 	font-family: "Verdana";
 	font-weight: bold;
+    vertical-align: middle;
+}
+
+a.vertical-nav-a {
+    display: block;
+    background-color: rgba(0, 0, 255, .5);
+    width: 100%;
+    height: 5vh;
+    margin-bottom: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+	outline-style: solid;
+	outline-width: 2px;
+	outline-color: black;
+	z-index: 3;
+	font-family: "Verdana";
+	font-weight: bold;
+    vertical-align: middle;
 }
 
 #left-container {
@@ -52,14 +73,15 @@ a.vertical-nav {
 	display: inline-block;
 	border-right-style: solid;
 	border-width: 2px;
+    visibility: hidden;
 }
 
 #main-container {
-	width: 83.75vw;
+	width: 100vw;
 	height: 100vh;
-	position: absolute;
+	position: fixed;
 	top: 0;
-	left: 15vw;
+	left: 0;
 	z-index: 1;
 	display: inline-block;
 }
@@ -87,4 +109,45 @@ a.vertical-nav {
 	width: 100%;
 	height: 100%;
 	background-color: white;
+}
+
+#pete {
+    position: fixed;
+    width: 14vw;
+    height: 25vh;
+    top: 0;
+    left: .5%;
+}
+
+#petette {
+    position: fixed;
+    width: 14vw;
+    height: 25vh;
+    bottom: 0;
+    left: .5%;
+}
+
+#nav-container {
+    position: fixed;
+    top: 33.3%;
+    height: 30vh;
+    width: inherit;
+}
+
+.class-overview {
+    display: inline-block;
+    margin-top: 15%;
+    background-color: white;
+    width: 15%;
+    height: 40%;
+}
+
+.overview-title {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Verdana";
+}
+
+.overview-content {
+    
 }

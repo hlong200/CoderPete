@@ -4,38 +4,59 @@
 		<title>Coder Pete</title>
 		<link rel="shortcut icon" href="images/Pete.gif" type="img/gif" />
         <link href="style.css" type="text/css" rel="stylesheet" />
-		<script>
-			var isCollapsed = false;
-	
-			function collapseNav() {
-				if (isCollapsed == false) {
-					document.getElementById("main-container").style.width = "100vw";
-					document.getElementById("main-container").style.left = "0";
-					document.getElementById("left-container").style.visibility = "hidden";
-					document.getElementById("collapse").src = "images/right-collapse.png";
+        <!--<script>
+            var $isCollapsed = false;
+            
+            $(document).ready(function() {
+                $("#collapse").mouseover(function() {
+                if (isCollapsed == false) {
+					$("#main-container").width("100vw");
+					$("#main-container").css({left: 0});
+					$("#left-container").hide();
+					$("#collapse").attr("src", "images/right-collapse.png");
 					isCollapsed = true;
 				} else if (isCollapsed == true) {
-					document.getElementById("main-container").style.width = "83.75vw";
-					document.getElementById("main-container").style.left = "15vw";
-					document.getElementById("left-container").style.visibility = "visible";
-					document.getElementById("collapse").src = "images/left-collapse.png";
+					$("#main-container").width("83.75vw");
+					$("#main-container").css({"15vw"});
+					$("#left-container").hide();
+					$("#collapse").attr("src", "images/left-collapse.png");
 					isCollapsed = false;
 				}
-			}
+                });
+            });
+        </script>-->
+		<script>
+			var isCollapsed = false;
+            
+            function collapseNav(elem) {
+                if (elem.id == "left-container") {
+                    document.getElementById("main-container").style.width = "100vw";
+				    document.getElementById("main-container").style.left = "0";
+				    document.getElementById("left-container").style.visibility = "hidden";
+                    document.getElementById("collapse").src = "images/right-collapse.png";
+                } else if (elem.id == "collapse") {
+                    document.getElementById("main-container").style.width = "83.75vw";
+				    document.getElementById("main-container").style.left = "15vw";
+				    document.getElementById("left-container").style.visibility = "visible";
+                    document.getElementById("collapse").src = "images/left-collapse.png";
+                }
+            }
 		</script>
     </head>
     <body>
-        <div id="left-container">
+        <div id="left-container" onmouseleave="collapseNav(this)">
+            <div id="nav-container">
                 <ul class="vertical-nav">
-                    <li><a class="vertical-nav" href="#">Home</a></li>
-                    <li><a class="vertical-nav" href="#">Classes</a></li>
+                    <li><a class="vertical-nav-a" href="#">Home</a></li>
+                    <li><a class="vertical-nav" href="classes.html">Classes</a></li>
                     <li><a class="vertical-nav" href="#">Guidelines</a></li>
                     <li><a class="vertical-nav" href="planbook.html">Planbook</a></li>
                     <li><a class="vertical-nav" href="#">Contact</a></li>
                 </ul>
+            </div>
         </div>
 		<div id="main-container">
-			<img id="collapse" onclick="collapseNav()" src="images/left-collapse.png" />
+			<img id="collapse" onmouseover="collapseNav(this)" src="images/left-collapse.png" />
 			<img id="banner" src="images/Banner.gif" />
 		</div>
     </body>
