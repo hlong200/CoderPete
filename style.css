@@ -95,7 +95,7 @@ a.vertical-nav-a {
 	top: 0;
 	left: 0;
 	z-index: 1;
-	display: inline-block;
+	float:left;
 }
 
 #collapse {
@@ -206,4 +206,15 @@ a.vertical-nav-a {
     position: absolute;
     bottom: 65vh;
     right: 9.5vw;
+article{
+	margin-left:1vw;
+	margin-top:1vw;
+	font-family: 'Franklin Gothic';
+}
+.contrast{
+	background-color: #fff;
+	opacity:0.9;
+	border-radius:15px;
+	border-style:solid;
+	border-color:#C0C0C0;
 }
