@@ -19,28 +19,30 @@ ul.vertical-nav {
 	position: static;
 	top: 50%;
 	transform: translateY(-50%);
+    font-size: 3vh;
 }
 
 a.vertical-nav {
     display: block;
-    background: #0CAEE8;
+    background: #C0C0C0;
     width: 100%;
     height: 5vh;
     margin-bottom: 25px;
     text-align: center;
     text-decoration: none;
     color: white;
-	outline-style: solid;
-	outline-width: 2px;
-	outline-color: black;
 	z-index: 3;
 	font-family: "Verdana";
 	font-weight: bold;
     vertical-align: middle;
+    border-top-right-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+    border-style: solid;
+    border-color: black;
 }
 
 a.vertical-nav:hover {
-    background: linear-gradient(to left, #0CAEE8, #00FFFF);
+    background: linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
 }
 
 a.vertical-nav-a {
@@ -63,12 +65,13 @@ a.vertical-nav-a {
 
 #left-container {
     position: absolute;
-    background: radial-gradient(black 15%, transparent 16%) 0 0,
-        radial-gradient(black 15%, transparent 16%) 8px 8px,
-        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#282828;
-    background-size:16px 16px;
+    background-color: #269;
+    background-image: linear-gradient(white 2px, transparent 2px),
+        linear-gradient(90deg, white 2px, transparent 2px),
+        linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
     width: 15vw;
     height: 100vh;
     left: -14.4vw;
@@ -100,13 +103,15 @@ a.vertical-nav-a {
 	height: 300px;
 	position: absolute;
 	top: 50%;
+    left: .6vw;
 	transform: translateY(-50%);
 	z-index: 1000;
 }
 
 #banner {
 	position: absolute;
-	left: 25%;
+	left: 50vw;
+    transform: translateX(-50%);
 	width: 40vw;
 	height: auto;
 }
@@ -159,4 +164,46 @@ a.vertical-nav-a {
 
 .overview-content {
     
+}
+
+#welcome {
+    opacity: .9;
+    font-family: "Segoe UI";
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #fff; 
+    background-image: 
+        linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+        linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #C0C0C0;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 2%;
+}
+
+#planbook-logo {
+    position: absolute;
+    right: 9.5vw;
+    bottom: 26vh;
+    width: 5vw;
+}
+
+#district-logo {
+    position: absolute;
+    bottom: 50vh;
+    transform: translateY(50%);
+    right: 6.8vw;
+    width: 10.5vw;
+}
+
+#parent-portal-logo {
+    position: absolute;
+    bottom: 65vh;
+    right: 9.5vw;
 }
