@@ -1,4 +1,7 @@
 body {
+    background: url("images/bkg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    /*
     background:
         linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
         linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -8,15 +11,14 @@ body {
         linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent  50%, transparent 75%, #242424 75%, #242424);
     background-color: #131313;
     background-size: 20px 20px;
+    */
 }
 
 ul.vertical-nav {
     list-style-type: none;
     margin: 0;
-    margin-top: 33.3%;
-    margin-bottom: 33.3%;
     padding: 0;
-	position: static;
+	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
     font-size: 3vh;
@@ -24,8 +26,19 @@ ul.vertical-nav {
 
 a.vertical-nav {
     display: block;
-    background: #C0C0C0;
-    width: 100%;
+    /*
+    background:
+        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    */
+    background: linear-gradient(to bottom, lightgray 0%,skyblue 21%,dodgerblue 49%,skyblue 80%,lightgray 100%);
+    width: 15vw;
     height: 5vh;
     margin-bottom: 25px;
     text-align: center;
@@ -38,7 +51,7 @@ a.vertical-nav {
     border-top-right-radius: 7.5px;
     border-bottom-right-radius: 7.5px;
     border-style: solid;
-    border-color: black;
+    border-color: steelblue;
 }
 
 a.vertical-nav:hover {
@@ -47,8 +60,8 @@ a.vertical-nav:hover {
 
 a.vertical-nav-a {
     display: block;
-    background: linear-gradient(to left, #0CE8AA, #0DFF76);
-    width: 100%;
+    background: linear-gradient(to bottom, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
+    width: 15vw;
     height: 5vh;
     margin-bottom: 25px;
     text-align: center;
@@ -65,13 +78,13 @@ a.vertical-nav-a {
 
 #left-container {
     position: absolute;
-    background-color: #269;
-    background-image: linear-gradient(white 2px, transparent 2px),
-        linear-gradient(90deg, white 2px, transparent 2px),
-        linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
-    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-    background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
     width: 15vw;
     height: 100vh;
     left: -14.4vw;
@@ -109,23 +122,32 @@ a.vertical-nav-a {
 }
 
 #banner {
+    opacity: .9;
 	position: absolute;
 	left: 50vw;
     transform: translateX(-50%);
 	width: 40vw;
 	height: auto;
+    background-color: black;
+    border-radius: 25px;
+    border-color: white;
+    border-style: solid;
 }
 
 #planbook {
 	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	background-color: white;
+	top: 50vh;
+	right: 50vw;
+    transform: translateX(50%) translateY(-50%);
+	width: 85vw;
+	height: 85vh;
+    background: rgba(255, 255, 255, .75);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
-#pete {
+#nav-pete {
     position: absolute;
     width: 14vw;
     height: 25vh;
@@ -133,7 +155,7 @@ a.vertical-nav-a {
     left: inherit;
 }
 
-#petette {
+#petra {
     position: absolute;
     width: 14vw;
     height: 25vh;
@@ -142,10 +164,10 @@ a.vertical-nav-a {
 }
 
 #nav-container {
-    position: fixed;
-    top: 33.3%;
-    height: 30vh;
-    width: inherit;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 20vw;
 }
 
 .class-overview {
@@ -167,6 +189,7 @@ a.vertical-nav-a {
 }
 
 #welcome {
+    height: 50vh;
     opacity: .9;
     font-family: "Segoe UI";
     position: absolute;
@@ -189,23 +212,27 @@ a.vertical-nav-a {
 
 #planbook-logo {
     position: absolute;
-    right: 9.5vw;
-    bottom: 26vh;
-    width: 5vw;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -70%;
+    width: 72px;
 }
 
 #district-logo {
     position: absolute;
-    bottom: 50vh;
-    transform: translateY(50%);
-    right: 6.8vw;
-    width: 10.5vw;
+    bottom: -45%;
+    right: 50%;
+    transform: translateX(50%);
+    width: 72px;
 }
 
 #parent-portal-logo {
     position: absolute;
-    bottom: 65vh;
-    right: 9.5vw;
+    width: 72px;
+    bottom: -20%;
+    right: 50%;
+    transform: translateX(50%);
+}
 article{
 	margin-left:1vw;
 	margin-top:1vw;

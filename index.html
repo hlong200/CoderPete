@@ -4,11 +4,25 @@
 		<title>Coder Pete</title>
 		<link rel="shortcut icon" href="images/Pete.gif" type="img/gif" />
         <link href="style.css" type="text/css" rel="stylesheet" />
+        <script>
+            function setNavPete() {
+                var choice = Math.floor((Math.random() * 2) + 1);
+                if (choice == 1) {
+                    document.getElementById("nav-pete").src = "images/pete.svg";
+                    alert("Pete chosen!");
+                } else {
+                    document.getElementById("nav-pete").src = "images/petra.svg";
+                    alert("Petra chosen");
+                }
+            }
+            window.onload = setNavPete();
+        </script>
     </head>
     <!-- Use "position: absolute;" for all elements -->
     <body>
         <div id="left-container">
             <!-- Anything that needs to be in the navigation window goes here -->
+            <img id="nav-pete" src="images/pete.svg"/>
             <div id="nav-container">
                 <ul class="vertical-nav">
                     <!-- Use the class "vertical-nav-a" to highlight the current page -->
@@ -17,15 +31,16 @@
                     <li><a class="vertical-nav" href="guidelines.html">Guidelines</a></li>
                     <li><a class="vertical-nav" href="planbook.html">Planbook</a></li>
                     <li><a class="vertical-nav" href="#">Contact</a></li>
+                    <a href="http://sdm.sisk12.com/oz" target="_blank"><img id="parent-portal-logo" src="images/parent-portal.gif" /></a>
+                    <a href="http://planbook.com/planbook.html?t=911676&k=stollclass&y=0&c=0" target="_blank"><img id="planbook-logo" src="images/planbook.png" /></a>
+                    <a href="http://ozark.k12.mo.us/Domain/14" target="_blank"><img id="district-logo" src="images/ozark-district-logo.png" /></a>
                 </ul>
             </div>
         </div>
 		<div id="main-container">
-			<img id="banner" src="images/Banner.gif" />
+			<img id="banner" src="images/banner.gif" />
             <!-- Main content goes here -->
-            <a href="http://sdm.sisk12.com/oz"><img id="parent-portal-logo" src="images/parent-portal.gif" /></a>
-            <a href="http://planbook.com/planbook.html?t=911676&k=stollclass&y=0&c=0"><img id="planbook-logo" src="images/planbook.png" /></a>
-            <a href="http://ozark.k12.mo.us/Domain/14"><img id="district-logo" src="images/ozark-district-logo.png" /></a>
+            
             <article id="welcome">
                 <h2>Welcome to Coder Pete</h2>
                 You are viewing the website for Mr. Stoll's Classroom at Ozark High school in Missouri. Every year, students will design the website. Since this is the first year for coderpete.com, there are several intentional design flaws to make it more challenging
