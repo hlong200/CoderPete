@@ -5,25 +5,19 @@
 		<link rel="shortcut icon" href="images/Pete.gif" type="img/gif" />
         <link href="style.css" type="text/css" rel="stylesheet" />
 		<script>
-			var isCollapsed = false;
-            
-            function collapseNav(elem) {
-                if (elem.id == "left-container") {
-                    document.getElementById("main-container").style.width = "100vw";
-				    document.getElementById("main-container").style.left = "0";
-				    document.getElementById("left-container").style.visibility = "hidden";
-                    document.getElementById("collapse").src = "images/right-collapse.png";
-                } else if (elem.id == "collapse") {
-                    document.getElementById("main-container").style.width = "83.75vw";
-				    document.getElementById("main-container").style.left = "15vw";
-				    document.getElementById("left-container").style.visibility = "visible";
-                    document.getElementById("collapse").src = "images/left-collapse.png";
+            function setNavPete() {
+                var choice = Math.floor((Math.random() * 2) + 1);
+                if (choice == 1) {
+                    document.getElementById("nav-pete").src = "images/pete.svg";
+                } else {
+                    document.getElementById("nav-pete").src = "images/petra.svg";
                 }
             }
-		</script>
+            window.onload = setNavPete();
+        </script>
     </head>
     <body>
-        <div id="left-container" onmouseleave="collapseNav(this)">
+        <div id="left-container" onmouseover="setNavPete()">
             <div id="nav-container">
                 <ul class="vertical-nav">
                     <li><a class="vertical-nav" href="index.html">Home</a></li>
@@ -35,7 +29,6 @@
             </div>
         </div>
 		<div id="main-container">
-			<img id="collapse" onmouseenter="collapseNav(this)" src="images/left-collapse.png" />
 			<img id="banner" src="images/Banner.gif" />
 		</div>
     </body>

@@ -9,10 +9,8 @@
                 var choice = Math.floor((Math.random() * 2) + 1);
                 if (choice == 1) {
                     document.getElementById("nav-pete").src = "images/pete.svg";
-                    alert("Pete chosen!");
                 } else {
                     document.getElementById("nav-pete").src = "images/petra.svg";
-                    alert("Petra chosen");
                 }
             }
             window.onload = setNavPete();
@@ -20,7 +18,7 @@
     </head>
     <!-- Use "position: absolute;" for all elements -->
     <body>
-        <div id="left-container">
+        <div id="left-container" onmouseover="setNavPete()">
             <!-- Anything that needs to be in the navigation window goes here -->
             <img id="nav-pete" src="images/pete.svg"/>
             <div id="nav-container">

@@ -5,19 +5,20 @@
 		<link rel="shortcut icon" href="images/Pete.gif" type="img/gif" />
         <link href="style.css" type="text/css" rel="stylesheet" />
         <script>
-            function fixPlanbook() {
-                var cssLink = document.createElement("link") 
-                cssLink.href = "style.css"; 
-                cssLink.rel = "stylesheet"; 
-                cssLink.type = "text/css"; 
-                frames['frame1'].document.body.appendChild(cssLink);
+            function setNavPete() {
+                var choice = Math.floor((Math.random() * 2) + 1);
+                if (choice == 1) {
+                    document.getElementById("nav-pete").src = "images/pete.svg";
+                } else {
+                    document.getElementById("nav-pete").src = "images/petra.svg";
+                }
             }
-            window.onload = fixPlanbook();
+            window.onload = setNavPete();
         </script>
     </head>
     <!-- Use "position: absolute;" for all elements -->
     <body>
-        <div id="left-container">
+        <div id="left-container" onmouseover="setNavPete()">
             <!-- Anything that needs to be in the navigation window goes here -->
             <div id="nav-container">
                 <ul class="vertical-nav">
