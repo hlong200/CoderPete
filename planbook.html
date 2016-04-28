@@ -5,12 +5,14 @@
 		<link rel="shortcut icon" href="images/Pete.gif" type="img/gif" />
         <link href="style.css" type="text/css" rel="stylesheet" />
         <script>
+            var currentImg = 0;
             function setNavPete() {
-                var choice = Math.floor((Math.random() * 2) + 1);
-                if (choice == 1) {
+                if (currentImg == 1) {
                     document.getElementById("nav-pete").src = "images/pete.svg";
+                    currentImg = 0;
                 } else {
                     document.getElementById("nav-pete").src = "images/petra.svg";
+                    currentImg = 1;
                 }
             }
             window.onload = setNavPete();
@@ -20,6 +22,7 @@
     <body>
         <div id="left-container" onmouseover="setNavPete()">
             <!-- Anything that needs to be in the navigation window goes here -->
+            <img id="nav-pete" />
             <div id="nav-container">
                 <ul class="vertical-nav">
                     <!-- Use the class "vertical-nav-a" to highlight the current page -->
@@ -36,7 +39,7 @@
         </div>
 		<div id="main-container">
             <!-- Main content goes here -->
-            
+            <img id="banner" src="images/Banner.gif" />
             <iframe id="planbook" frameBorder="0" src="http://planbook.com/planbook.html?t=911676&k=stollclass&y=0&c=0"></iframe>
 		</div>
     </body>

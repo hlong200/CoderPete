@@ -5,12 +5,14 @@
 		<link rel="shortcut icon" href="images/Pete.gif" type="img/gif" />
         <link href="style.css" type="text/css" rel="stylesheet" />
         <script>
+            var currentImg = 0;
             function setNavPete() {
-                var choice = Math.floor((Math.random() * 2) + 1);
-                if (choice == 1) {
+                if (currentImg == 1) {
                     document.getElementById("nav-pete").src = "images/pete.svg";
+                    currentImg = 0;
                 } else {
                     document.getElementById("nav-pete").src = "images/petra.svg";
+                    currentImg = 1;
                 }
             }
             window.onload = setNavPete();

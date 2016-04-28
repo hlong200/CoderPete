@@ -4,12 +4,25 @@
 		<title>Coder Pete</title>
 		<link rel="shortcut icon" href="images/Pete.gif" type="img/gif" />
         <link href="style.css" type="text/css" rel="stylesheet" />
+        <script>
+            var currentImg = 0;
+            function setNavPete() {
+                if (currentImg == 1) {
+                    document.getElementById("nav-pete").src = "images/pete.svg";
+                    currentImg = 0;
+                } else {
+                    document.getElementById("nav-pete").src = "images/petra.svg";
+                    currentImg = 1;
+                }
+            }
+            window.onload = setNavPete();
+        </script>
     </head>
     <!-- Use "position: absolute;" for all elements -->
     <body>
-        <div id="left-container">
+        <div id="left-container" onmouseover="setNavPete()">
             <!-- Anything that needs to be in the navigation window goes here -->
-            <img id="collapse" src="images/left-collapse.png" />
+            <img id="nav-pete" />
             <div id="nav-container">
                 <ul class="vertical-nav">
                     <!-- Use the class "vertical-nav-a" to highlight the current page -->
@@ -24,7 +37,7 @@
 		<div id="main-container">
 			<img id="banner" src="images/Banner.gif" />
             <!-- Main content goes here -->
-            <article style="width:40vw;height:auto; margin-top:18vh;" class="contrast">
+            <article class="contrast" style="top: 15vh; left: 5vw;">
 				<ul>
 					<p><strong>Act like an adult:</strong></p>
 					<ul>
@@ -68,8 +81,8 @@
 					</ul>
 				</ul>
 			</article>
-            <article style="width:40vw; height:auto; margin-left:1vw;" class="contrast">
-				<h3>Computer Lab Do's and Dont's</h3>
+            <article style="top: 15vh; right: 5vw;" class="contrast">
+				<h3 style="padding-left: 3vw;">Computer Lab Do's and Dont's</h3>
 				<ul>
 				<li>Do <strong>not</strong> bring Food or drinks into the lab.</li>
 				<li>Do use surge protectors.</li>
