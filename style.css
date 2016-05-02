@@ -56,7 +56,6 @@ a.vertical-nav {
     color: white;
 	z-index: 3;
 	font-family: "Verdana";
-	font-weight: bold;
     vertical-align: middle;
     border-top-right-radius: 7.5px;
     border-bottom-right-radius: 7.5px;
@@ -83,8 +82,7 @@ a.vertical-nav-a {
 	outline-width: 2px;
 	outline-color: black;
 	z-index: 3;
-	font-family: "Comic Sans MS";
-	font-weight: bold;
+	font-family: "Segoe UI";
     vertical-align: middle;
 }
 
@@ -99,7 +97,7 @@ a.vertical-nav-a {
     background-size:16px 16px;
     width: 15vw;
     height: 100vh;
-    left: -15vw;
+    left: -14.8vw;
     top: 0;
     padding: 0;
 	z-index: 5;
@@ -157,7 +155,6 @@ a.vertical-nav-a {
     background: rgba(255, 255, 255, .80);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    border-top-left-radius: 15px;
 }
 
 #nav-pete {
@@ -280,7 +277,7 @@ article{
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    height: 50vh;
+    height: 25vh;
 }
 
 .ribbon {
