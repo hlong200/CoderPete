@@ -31,9 +31,11 @@
                     <li><a class="vertical-nav" href="guidelines.html">Guidelines</a></li>
                     <li><a class="vertical-nav" href="planbook.html">Planbook</a></li>
                     <li><a class="vertical-nav" href="#">Contact</a></li>
+                    <a href="http://sdm.sisk12.com/oz" target="_blank"><img id="parent-portal-logo" src="images/parent-portal.gif" /></a>
+                    <a href="http://planbook.com/planbook.html?t=911676&k=stollclass&y=0&c=0" target="_blank"><img id="planbook-logo" src="images/planbook.png" /></a>
+                    <a href="http://ozark.k12.mo.us/Domain/14" target="_blank"><img id="district-logo" src="images/ozark-district-logo.png" /></a>
                 </ul>
             </div>
-            <!--<div class="ribbon" style="position: absolute; top: 50%; transform: rotate(90deg) translateY(-50%); right: -70%; width: 100%;"></div>-->
         </div>
 		<div id="main-container">
 			<img id="banner" src="images/banner.gif" />
@@ -48,11 +50,6 @@
                 <h3>Disclaimer</h3>
                 The content on this site was created by Steve Stoll. It does not necessarily represent the positions, strategies or opinions of the Ozark School District.
             </article>
-            <div id="right-container">
-                <a href="http://planbook.com/planbook.html?t=911676&k=stollclass&y=0&c=0" target="_blank"><img id="planbook-logo" src="images/planbook.png" /></a>
-                <a href="http://sdm.sisk12.com/oz" target="_blank"><img id="parent-portal-logo" src="images/parent-portal.gif" /></a>
-                <a href="http://ozark.k12.mo.us/Domain/14" target="_blank"><img id="district-logo" src="images/ozark-district-logo.png" /></a>
-            </div>
 		</div>
     </body>
 </html>

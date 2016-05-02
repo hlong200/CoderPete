@@ -1,3 +1,6 @@
+html {
+    max-height: 100vh;
+}
 body {
     /*
     background: url("images/bkg.jpg") no-repeat center center fixed;
@@ -17,7 +20,7 @@ body {
         radial-gradient(black 15%, transparent 16%) 8px 8px,
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color: cadetblue;
+    background-color: dodgerblue;
     background-size:16px 16px;
 }
 
@@ -52,7 +55,7 @@ a.vertical-nav {
     text-decoration: none;
     color: white;
 	z-index: 3;
-	font-family: "Comic Sans MS";
+	font-family: "Verdana";
 	font-weight: bold;
     vertical-align: middle;
     border-top-right-radius: 7.5px;
@@ -86,17 +89,17 @@ a.vertical-nav-a {
 }
 
 #left-container {
-    position: absolute;
+    position: fixed;
     background:
-radial-gradient(black 15%, transparent 16%) 0 0,
-radial-gradient(black 15%, transparent 16%) 8px 8px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-background-color:#282828;
-background-size:16px 16px;
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
     width: 15vw;
     height: 100vh;
-    left: -14.4vw;
+    left: -15vw;
     top: 0;
     padding: 0;
 	z-index: 5;
@@ -177,7 +180,7 @@ background-size:16px 16px;
     position: absolute;
     top: 0;
     height: 100vh;
-    width: 20vw;
+    width: 15vw;
 }
 
 .class-overview {
@@ -199,7 +202,6 @@ background-size:16px 16px;
 }
 
 #welcome {
-    height: 50vh;
     opacity: .95;
     font-family: "Segoe UI";
     position: absolute;
@@ -222,26 +224,24 @@ background-size:16px 16px;
 
 #planbook-logo {
     position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    bottom: -70%;
-    width: 72px;
+    right: 0;
+    bottom: 0;
+    height: 33.3%;
 }
 
 #district-logo {
     position: absolute;
-    bottom: -45%;
-    right: 50%;
-    transform: translateX(50%);
-    width: 72px;
+    height: 33.3%;
+    right: 0;
 }
 
 #parent-portal-logo {
     position: absolute;
-    width: 72px;
-    bottom: -20%;
-    right: 50%;
-    transform: translateX(50%);
+    height: 33.3%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    border-radius: 10px;
 }
 article{
 	margin-left:1vw;
@@ -256,4 +256,83 @@ article{
 	border-color:#C0C0C0;
     width: 40vw;
     position: absolute;
+}
+
+.text-box {
+     width: 70vw;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    resize: none;
+    font-family: "Segoe UI";
+}
+
+#nav-hint {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 100vh;
+}
+
+#right-container {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50vh;
+}
+
+.ribbon {
+    font-size: 16px !important;
+    /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+    width: 50%;
+    
+    position: relative;
+    background: skyblue;
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em; /* Adjust to suit */
+    margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+
+.ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid dodgerblue;
+    z-index: -1;
+}
+
+.ribbon:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+
+.ribbon:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #804f7c transparent transparent transparent;
+    bottom: -1em;
+}
+
+.ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+
+.ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
 }
