@@ -4,17 +4,6 @@
 		<title>Coder Pete</title>
 		<link rel="shortcut icon" href="images/Pete.gif" type="img/gif" />
         <link href="style.css" type="text/css" rel="stylesheet" />
-		<script>
-            function setNavPete() {
-                var choice = Math.floor((Math.random() * 2) + 1);
-                if (choice == 1) {
-                    document.getElementById("nav-pete").src = "images/pete.svg";
-                } else {
-                    document.getElementById("nav-pete").src = "images/petra.svg";
-                }
-            }
-            window.onload = setNavPete();
-        </script>
     </head>
     <body>
         <div id="left-container" onmouseover="setNavPete()">
@@ -27,9 +16,31 @@
                     <li><a class="vertical-nav" href="#">Contact</a></li>
                 </ul>
             </div>
+            <div id="separator"></div>
         </div>
 		<div id="main-container">
-			<img id="banner" src="images/Banner.gif" />
+			<img id="banner" src="images/banner-inverted.gif" />
+            <div class="class-div" id="concepts">
+                <img class="title" src="images/concepts.gif" />
+            </div>
+            <div class="class-div" id="comp-sci">
+                <img class="title" src="images/compsci.gif" />
+            </div>
+            <div class="class-div" id="programming">
+                <img class="title" src="images/programming.gif" />
+            </div>
+            <div class="class-div" id="networking">
+            </div>
+            <div class="class-div" id="pc-tech">
+            </div>
+            <div class="class-div" id="web" style="margin-bottom: 10vh;">
+            </div>
 		</div>
+        <div id="right-container">
+            <ul id="class-nav">
+                <li><a id="class-nav" href="#concepts">Concepts</a></li>
+                <li><a id="class-nav" href="#comp-sci">Comp Sci</a></li>
+            </ul>
+        </div>
     </body>
 </html>

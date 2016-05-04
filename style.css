@@ -20,7 +20,7 @@ body {
         radial-gradient(black 15%, transparent 16%) 8px 8px,
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color: dodgerblue;
+    background-color: #282828;
     background-size:16px 16px;
 }
 
@@ -47,21 +47,23 @@ a.vertical-nav {
     background-color: #131313;
     background-size: 20px 20px;
     */
-    background: linear-gradient(to bottom, slategray 0%,skyblue 21%,dodgerblue 49%,skyblue 80%,slategray 100%);
-    width: 15vw;
+    background: linear-gradient(to bottom, darkslategray 0%, #282828 21%, white 49%, #282828 80%, darkslategray 100%);
+    width: 14.5vw;
     height: 5vh;
     margin-bottom: 25px;
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: black;
 	z-index: 3;
 	font-family: "Verdana";
+    font-weight: bold;
     vertical-align: middle;
     border-top-right-radius: 7.5px;
     border-bottom-right-radius: 7.5px;
     border-style: solid;
     border-color: black;
-    border-width: 1.5px;
+    border-width: 2px;
+    z-index: 20;
 }
 
 a.vertical-nav:hover {
@@ -93,16 +95,16 @@ a.vertical-nav-a {
         radial-gradient(black 15%, transparent 16%) 8px 8px,
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
         radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#282828;
+    background-color: darkslategray;
     background-size:16px 16px;
-    width: 15vw;
+    width: 17vw;
     height: 100vh;
-    left: -14.8vw;
+    left: -15vw;
     top: 0;
     padding: 0;
 	z-index: 5;
 	border-right-style: solid;
-	border-width: 2px;
+	border-width: 4px;
     border-color: black;
     visibility: visible;
     transition: left 1s;
@@ -136,10 +138,11 @@ a.vertical-nav-a {
     opacity: 1;
 	position: absolute;
 	left: 50vw;
+    top: 2.5vh;
     transform: translateX(-50%);
 	width: 40vw;
 	height: auto;
-    background-color: black;
+    background-color: white;
     border-radius: 25px;
     border-color: white;
     border-style: solid;
@@ -206,7 +209,7 @@ a.vertical-nav-a {
     left: 50vw;
     transform: translateX(-50%);
     text-align: center;
-    background-color: #fff; 
+    background-color: white; 
     background-image: 
         linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
         linear-gradient(#eee .1em, transparent .1em);
@@ -332,4 +335,54 @@ article{
 .ribbon .ribbon-content:after {
     right: 0;
     border-width: 1em 1em 0 0;
+}
+
+#separator {
+    position: absolute;
+    width: 2vw;
+    height: 100vh;
+    background: linear-gradient(to left, #282828, darkslategray);
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+#concepts {
+    position: absolute;
+    top: 20vh;
+    background-color: white;
+    width: 80vw;
+    left: 10vw;
+    height: 50vh;
+    box-shadow: 10px 10px 5px gray;
+}
+
+#comp-sci {
+    position: absolute;
+    top: 80vh;
+    background-color: white;
+    width: 80vw;
+    left: 10vw;
+    height: 50vh;
+    box-shadow: 10px 10px 5px gray;
+}
+
+.title {
+    color: white;
+    width: 5vh;
+    font-weight: bold;
+}
+
+#programming {
+    position: absolute;
+    top: 140vh;
+    background-color: white;
+    width: 80vw;
+    left: 10vw;
+    height: 50vh;
+    box-shadow: 10px 10px 5px gray;
+}
+
+#class-nav {
+    list-style-type: none;
 }
