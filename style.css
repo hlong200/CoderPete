@@ -347,42 +347,66 @@ article{
     z-index: 10;
 }
 
-#concepts {
-    position: absolute;
-    top: 20vh;
-    background-color: white;
-    width: 80vw;
-    left: 10vw;
-    height: 50vh;
-    box-shadow: 10px 10px 5px gray;
-}
-
-#comp-sci {
-    position: absolute;
-    top: 80vh;
-    background-color: white;
-    width: 80vw;
-    left: 10vw;
-    height: 50vh;
-    box-shadow: 10px 10px 5px gray;
-}
-
 .title {
     color: white;
-    width: 5vh;
+    width: 2.5vh;
     font-weight: bold;
-}
-
-#programming {
-    position: absolute;
-    top: 140vh;
-    background-color: white;
-    width: 80vw;
-    left: 10vw;
-    height: 50vh;
-    box-shadow: 10px 10px 5px gray;
 }
 
 #class-nav {
     list-style-type: none;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    z-index: 20;
+}
+
+a.class-nav {
+    display: block;
+    background-color: white;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    font-family: "Verdana";
+    width: 8vw;
+    height: 5vh;
+    text-align: center;
+    z-index: 20;
+}
+
+ul.class-nav {
+    list-style-type: none;
+}
+
+.class-div {
+    z-index: 10;
+    margin-top: 10%;
+    width: 70vw;
+    height: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 5px gray;
+    background-color: white;
+}
+
+.helpful-links {
+    text-decoration: none;
+    color: black;
+}
+
+.class-icon {
+    width: 2.5vw;
+}
+
+.directions {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20vh;
+    height: 5vh;
+    width: 60vw;
+    background-color: white;
+    font-family: "Segoe UI";
+    text-align: center;
+    font-size: 1.3em;
 }
