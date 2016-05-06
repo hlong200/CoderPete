@@ -379,14 +379,15 @@ ul.class-nav {
 }
 
 .class-div {
-    z-index: 10;
-    margin-top: 10%;
+    position: absolute;
     width: 70vw;
     height: 25vh;
-    margin-left: auto;
-    margin-right: auto;
     box-shadow: 10px 10px 5px gray;
     background-color: white;
+}
+
+.title {
+    position: absolute;
 }
 
 .helpful-links {
@@ -409,4 +410,95 @@ ul.class-nav {
     font-family: "Segoe UI";
     text-align: center;
     font-size: 1.3em;
+}
+
+.overview-text {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: "Segoe UI";
+    font-size: 75%;
+    vertical-align: middle;
+    background: linear-gradient(to bottom, darkslategray 0%, #282828 21%, gray 49%, #282828 80%, darkslategray 100%);
+    height: 10%;
+}
+
+#concepts {
+    top: 30vh;
+    left: 15vw;
+}
+
+#concepts-title {
+    top: 30vh;
+    left: 15vw;
+}
+
+#concepts-lessons {
+    margin-top: 0;
+}
+
+#concepts-lessons-container {
+    position: absolute;
+    width: 33%;
+    left: 2%;
+    height: 100%;
+}
+
+#concepts-scavenge {
+}
+
+#search-ex {
+}
+
+#basic-web {
+}
+
+#comp-sci {
+    top: 65vh;
+    left: 15vw
+}
+
+#comp-sci-title {
+    top: 65vh;
+    left: 15vw;
+}
+
+#programming {
+    top: 100vh;
+    left: 15vw;
+}
+
+#programming-title {
+    top: 100vh;
+    left: 15vw;
+}
+
+#networking {
+    top: 135vh;
+    left: 15vw;
+}
+
+#networking-title {
+    top: 135vh;
+    left: 15vw;
+}
+
+#pc-tech {
+    top: 170vh;
+    left: 15vw;
+}
+
+#pc-tech-title {
+    top: 170vh;
+    left: 15vw;
+}
+
+#web {
+    top: 205vh;
+    left: 15vw;
+}
+
+#web-title {
+    top: 205vh;
+    left: 15vw;
 }
